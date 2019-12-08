@@ -1,7 +1,7 @@
 <?php
 
-    require "token.php";
-	$group_id = '81265627';
+    require "settings.php";
+
 	$vk = new Vk($token);
 
 	$images = array	(
@@ -68,7 +68,7 @@
     imagefttext($image, 20, 0, 20, 135, $white, $font, $tgn_weather);	
     imagefttext($image, 20, 0, 20, 170, $white, $font, 'Ветер '.$tgn_wind.' м/с');	
     imagejpeg($image, 'pic/new.jpg', 100); // сохраняем полученную картинку в 100% качестве
-    imagedestroy($image); //Освобождаем
+    imagedestroy($image); // освобождаем
 
 	$upload_server = $vk->photosGetWallUploadServer($group_id);
 	$upload = $vk->uploadFile($upload_server['upload_url'], 'pic/new.jpg');
