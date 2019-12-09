@@ -1,6 +1,6 @@
 <?php
 
-    require "settings.php";
+    require "config.php";
 
 	$vk = new Vk($token);
 

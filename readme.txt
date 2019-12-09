@@ -1,4 +1,4 @@
-settings.php содержит:
+config.php содержит:
 $token = '...';
 $group_id = '...';
 
